@@ -1,0 +1,65 @@
+/* ===== Part 1: CSS Transitions & Animations ===== */
+
+/* Button hover effect */
+.animated-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animated-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Fade box animation */
+.fade-box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin-top: 20px;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Part 3: JS-triggered animations */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  margin-top: 20px;
+  transform: translateX(0);
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.box-animate {
+  transform: translateX(200px) rotate(20deg);
+  background-color: purple;
+}
+
+/* Card flip animation */
+.card {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
